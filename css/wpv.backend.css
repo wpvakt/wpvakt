@@ -1,0 +1,461 @@
+#dashboard-widgets #wpvakt *,
+.wpv_settings * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.wpv_settings {
+  position: relative; }
+
+@font-face {
+  font-family: 'wpv';
+  src: url("../fonts/wpv.eot?-w15slo");
+  src: url("../fonts/wpv.eot?#iefix-w15slo") format("embedded-opentype"), url("../fonts/wpv.woff?-w15slo") format("woff"), url("../fonts/wpv.ttf?-w15slo") format("truetype"), url("../fonts/wpv.svg?-w15slo#wpv") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+#toplevel_page_wpv_settings div.wp-menu-image {
+  font: 400 20px/1 wpv !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+#toplevel_page_wpv_settings div.wp-menu-image:before {
+  content: "\76" !important;
+  font: 400 20px/1 wpv !important; }
+
+.wv_error {
+  color: white;
+  background: #D54E21;
+  padding: 8px 10px; }
+
+/* dashboard widget */
+#dashboard-widgets #wpvakt {
+  margin: 0px 8px 15px;
+  background: #61ba9a !important;
+  color: white !important; }
+  #dashboard-widgets #wpvakt .inside {
+    padding: 10px 20px 20px; }
+    #dashboard-widgets #wpvakt .inside .top_right_text {
+      float: right;
+      padding-top: 15px;
+      padding-right: 5px;
+      font-size: 20px; }
+    #dashboard-widgets #wpvakt .inside .wpv_loading_status_icon, #dashboard-widgets #wpvakt .inside .wpv_loading_status_msg {
+      color: white !important; }
+    #dashboard-widgets #wpvakt .inside .noplan_msg, #dashboard-widgets #wpvakt .inside .activeplan_msg {
+      font-weight: bold;
+      overflow: hidden;
+      display: block;
+      margin-bottom: 30px;
+      font-size: 17px; }
+      #dashboard-widgets #wpvakt .inside .noplan_msg img, #dashboard-widgets #wpvakt .inside .activeplan_msg img {
+        float: left;
+        margin-right: 15px; }
+    #dashboard-widgets #wpvakt .inside .no_plan_btn, #dashboard-widgets #wpvakt .inside .active_plan_btn {
+      background: #E14D43;
+      color: white !important;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-weight: bold; }
+    #dashboard-widgets #wpvakt .inside .activeplan_signature {
+      padding: 30px 0 0 0;
+      font-size: 15px; }
+  #dashboard-widgets #wpvakt .handlediv, #dashboard-widgets #wpvakt .hndle {
+    display: none !important; }
+
+/* settings header */
+.wpv_settings_logo {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+/* status container & loader */
+.wpv_status {
+  margin-bottom: 20px;
+  position: relative;
+  display: block; }
+
+.wpv_checking_status .wpv_loading_status_icon_container {
+  position: relative;
+  display: block;
+  margin-left: 10px;
+  float: left;
+  width: 22px;
+  height: 22px; }
+  .wpv_checking_status .wpv_loading_status_icon_container .wpv_loading_status_icon {
+    font-family: "dashicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #222222;
+    font-size: 24px;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* rotation */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    -webkit-animation: spin .7s linear infinite;
+    -moz-animation: spin .7s linear infinite;
+    animation: spin .7s linear infinite; }
+    .wpv_checking_status .wpv_loading_status_icon_container .wpv_loading_status_icon:before {
+      content: "\f463"; }
+.wpv_checking_status .wpv_loading_status_msg {
+  color: #222222;
+  float: left;
+  font-size: 15px;
+  padding: 2px 0 0 10px;
+  display: inline-block; }
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+/* status NO PLAN message*/
+.wpv_status p {
+  margin: 0px;
+  color: white; }
+
+.wpv_status strong {
+  font-size: 16px; }
+
+.wpv_no_plan {
+  padding: 10px;
+  overflow: hidden; }
+  .wpv_no_plan p {
+    color: #d54e21 !important;
+    font-size: 17px; }
+    .wpv_no_plan p img {
+      float: left;
+      margin-right: 15px;
+      margin-top: -5px; }
+
+.wpv_warning_icon {
+  float: left;
+  margin-right: 15px;
+  font-family: 'wpv';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 1px;
+  font-size: 72px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.wpv_warning_icon:before {
+  content: "t" !important; }
+
+/* active plan message on settings page */
+.wpv_plan_active {
+  padding: 10px;
+  overflow: hidden;
+  margin-bottom: 20px; }
+  .wpv_plan_active p {
+    color: #62b89a !important;
+    font-size: 17px; }
+    .wpv_plan_active p img {
+      float: left;
+      margin-right: 15px;
+      margin-top: -5px; }
+
+.wpv_plan_active_icon {
+  float: left;
+  margin-right: 15px;
+  font-family: "dashicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #fff;
+  font-size: 72px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.wpv_plan_active_icon:before {
+  content: "\f328"; }
+
+.wpvs_h1, .wpvs_h2, #wpv_statistics, .wpvs_gray, .chpp, .wpv_pricing_options {
+  display: none; }
+
+/* pricing options */
+h2.chpp {
+  color: #62B89A;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: left;
+  font-size: 30px;
+  line-height: 50px;
+  margin-top: 30px;
+  padding: 0 30px 0 0; }
+
+.wpv_pricing_options {
+  width: 100%;
+  border-spacing: 0px; }
+  .wpv_pricing_options th {
+    background: #62B89A;
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    border-left: 1px solid #fff;
+    font-size: 16px; }
+    .wpv_pricing_options th.ptc1 {
+      text-align: left;
+      width: 30%;
+      border: none; }
+  .wpv_pricing_options tbody tr {
+    background: #F4F4F4; }
+    .wpv_pricing_options tbody tr:nth-child(even) {
+      background: #EFEFEF; }
+    .wpv_pricing_options tbody tr td {
+      padding: 8px;
+      text-align: center;
+      border-right: 1px solid #DCDCDC;
+      color: #797979; }
+      .wpv_pricing_options tbody tr td.pttbc1 {
+        border-left: 1px solid #DCDCDC;
+        color: #000; }
+      .wpv_pricing_options tbody tr td span.ptok, .wpv_pricing_options tbody tr td span.ptno {
+        font-family: "dashicons";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+      .wpv_pricing_options tbody tr td.pttbc1 {
+        text-align: left;
+        font-size: 13px; }
+      .wpv_pricing_options tbody tr td span.ptok:before {
+        color: #63B89A;
+        font-size: 32px;
+        line-height: 32px;
+        content: "\f147"; }
+      .wpv_pricing_options tbody tr td span.ptno:before {
+        color: #E76558;
+        font-size: 28px;
+        line-height: 28px;
+        content: "\f335"; }
+      .wpv_pricing_options tbody tr td span.ptper {
+        width: 100%;
+        display: block;
+        margin-top: -4px;
+        font-size: 11px; }
+      .wpv_pricing_options tbody tr td a.ptbestill {
+        color: white;
+        text-decoration: none;
+        background: #E14D43;
+        padding: 8px 20px;
+        font-size: 15px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px; }
+        .wpv_pricing_options tbody tr td a.ptbestill:hover {
+          background: #f87067; }
+    .wpv_pricing_options tbody tr.ptrp td {
+      padding: 20px; }
+      .wpv_pricing_options tbody tr.ptrp td table {
+        width: 100%; }
+      .wpv_pricing_options tbody tr.ptrp td table td {
+        border: none;
+        padding: 0px;
+        color: #797979;
+        text-align: left; }
+        .wpv_pricing_options tbody tr.ptrp td table td div {
+          color: #62B89A;
+          font-weight: bold;
+          font-size: 36px;
+          padding-right: 4px;
+          text-align: right; }
+        .wpv_pricing_options tbody tr.ptrp td table td span {
+          display: block;
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: bold; }
+    .wpv_pricing_options tbody tr.ptaction td {
+      padding: 25px 0px;
+      border-bottom: 1px solid #DCDCDC; }
+
+/* statistics */
+.wpvs_h1 {
+  color: #595959;
+  font-size: 35px;
+  margin-bottom: 30px;
+  line-height: 45px; }
+
+.wpvs_h1 span {
+  float: left;
+  margin-right: 10px;
+  font-family: "dashicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #595959;
+  font-size: 45px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.wpvs_h1 span:before {
+  content: "\f160"; }
+
+.wpvs_h2 {
+  color: #5B5B5B;
+  font-size: 18px !important;
+  line-height: 20px; }
+
+.wpvs_h3 {
+  color: #616161;
+  font-size: 25px;
+  margin-bottom: 10px;
+  line-height: 30px;
+  margin-top: 0px;
+  text-align: left;
+  text-transform: uppercase; }
+
+.wpvs_h4 {
+  color: #616161;
+  font-size: 16px;
+  margin-bottom: 0px;
+  line-height: 30px;
+  margin-top: 0px;
+  text-align: left; }
+
+.wpvs_gray {
+  background: #E4E4E4;
+  padding: 20px;
+  margin-bottom: 30px; }
+
+#wpv_statistics {
+  margin-bottom: 40px; }
+
+#wpv_statistics li {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+  background: #F6F1EF;
+  padding: 10px;
+  border: 1px solid #ECE2DF; }
+
+#wpv_statistics li .wpvs_number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -2px;
+  margin-right: 10px;
+  height: 70px;
+  color: #D54E21; }
+
+#wpv_statistics .wpv_more {
+  padding-left: 130px; }
+
+#wpv_statistics .wpvs_header {
+  margin: 0px 0px 5px 0px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #D54E21; }
+
+#wpv_statistics .wpvs_desc {
+  margin: 0px 0px 5px 0px; }
+
+#wpv_statistics .wpvs_bar {
+  width: 100%;
+  height: 3px;
+  background: #EAD0C7;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px; }
+
+#wpv_statistics .wpvs_bar span {
+  background: #E57D5B;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 0%; }
+
+/* the summary */
+#wpv_summary h3 {
+  padding: 8px 14px;
+  cursor: default; }
+#wpv_summary .inside p {
+  color: #222222;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EEEEEE;
+  margin-bottom: 10px;
+  position: relative; }
+  #wpv_summary .inside p .wpv_si {
+    margin-right: 10px;
+    font-family: "dashicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #AAAAAA;
+    font-size: 20px;
+    top: 5px;
+    position: relative;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  #wpv_summary .inside p.wpvs_domain span.wpv_si:before {
+    content: "\f319"; }
+  #wpv_summary .inside p.wpvs_plan span.wpv_si:before {
+    content: "\f163"; }
+  #wpv_summary .inside p.wpvs_last span.wpv_si:before {
+    content: "\f145"; }
+  #wpv_summary .inside p.wpvs_next span.wpv_si:before {
+    content: "\f145"; }
+  #wpv_summary .inside p.wpvs_expires {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border: none; }
+    #wpv_summary .inside p.wpvs_expires span.wpv_si:before {
+      content: "\f321"; }
+  #wpv_summary .inside p .wpv_sv {
+    color: #0074A2;
+    position: absolute;
+    top: 6px;
+    right: 6px; }

@@ -1,0 +1,2 @@
+v.1.5.1
+- status emails are no longer set to customers that have active plan
